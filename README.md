@@ -2,7 +2,7 @@
 
 Ultra-minimal personal website built with Jekyll. Pure grayscale design, Markdown blogging, deployed on GitHub Pages with automatic HTTPS.
 
-**Live Site:** [https://vsrvenna.github.io](https://visareve.github.io)
+**Live Site:** [https://ViSaReVe.github.io](https://visareve.github.io)
 
 ---
 
