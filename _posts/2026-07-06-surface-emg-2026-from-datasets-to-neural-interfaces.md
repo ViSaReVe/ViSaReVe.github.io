@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Surface EMG in 2026: From Condition-Varied Datasets to Consumer Neural Interfaces"
-date: 2026-07-06
+date: 2026-07-04
 categories: [research]
 tags: [biosignals, emg, datasets, neural-interface, machine-learning]
 excerpt: "The EMAHA sEMG datasets I helped build, what our papers found about measurement conditions, and where EMG is headed in 2026 — Meta's Neural Band, foundation models, dry electrodes, and the open problems."
