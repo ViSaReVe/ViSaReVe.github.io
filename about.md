@@ -5,7 +5,7 @@ title: About
 
 I'm a Master's student in Electrical and Computer Engineering at the University of Southern California, specializing in Machine Learning and Data Science. My research sits at the intersection of neurotechnology, biosignal processing, and artificial intelligence.
 
-Currently, I work as a graduate researcher at USC's COOR Lab and the Information Sciences Institute, where I develop ML tools for clinical biomechanics and research automation. My work focuses on making complex data analysis accessible and practical for real-world applications.
+Currently, I work as a graduate researcher at USC's COOR Lab, where I develop ML tools for clinical biomechanics and biosignal processing. My work focuses on making complex data analysis accessible and practical for real-world applications.
 
 ## Education
 
@@ -49,9 +49,9 @@ Aug 2020 - May 2024 | Sri City, India
 
 **Programming:** Python, C++, MATLAB, SQL, R
 
-**ML & Deep Learning:** PyTorch, Transformers, State-Space Models, Transfer Learning, RAG
+**ML & Deep Learning:** PyTorch, Deep Learning, State-Space Models, Time-Series ML, Model Evaluation
 
-**Tools & Frameworks:** scikit-learn, FastAPI, Docker, MLflow, W&B, Git/GitHub
+**Tools & Frameworks:** scikit-learn, FastAPI, Docker, MLflow, Git/GitHub
 
 **Biomedical & Neuroimaging:** BIDS, FSL, sEMG Processing, Motion Capture, HIPAA Compliance
 
@@ -59,7 +59,7 @@ Aug 2020 - May 2024 | Sri City, India
 
 When I'm not working on research, I enjoy exploring new technologies, contributing to open-source projects, and staying active. I'm particularly interested in the potential of AI to transform healthcare and make advanced medical technologies more accessible.
 
-I'm currently seeking **ML engineering internships for Summer 2026**, particularly in neurotechnology, health tech, or research-focused roles.
+I'm currently seeking **full-time ML / signal-processing roles (2026)**, particularly in sensor ML, neurotechnology, or applied-ML positions.
 
 ## Contact
 

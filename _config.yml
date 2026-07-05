@@ -1,14 +1,14 @@
 # Site settings
 title: "Vidya Sagar Reddy Venna"
 description: "MS Student in ECE at USC | ML & Neurotechnology Researcher"
-url: "https://vsrvenna.github.io"
+url: "https://visareve.github.io"
 baseurl: ""
 
 # Author info
 author:
   name: "Vidya Sagar Reddy Venna"
   email: "vvenna@usc.edu"
-  github: "vsrvenna"
+  github: "ViSaReVe"
   linkedin: "vidyasagarvenna"
   scholar: "2zX94O4AAAAJ"
 

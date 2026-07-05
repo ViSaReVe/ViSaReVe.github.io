@@ -1,55 +1,43 @@
 - title: "State-Space Neural Decoding"
   institution: "USC - EE 675 Neural Engineering"
   date: "Fall 2025"
-  description: "Built and validated state-space models including Kalman filters, point-process filters, and Mamba selective state-space models to decode 2D behavioral trajectories from primate motor cortex spiking data. Achieved R² = 0.67-0.70 using the O'Doherty primate dataset."
+  description: "Built and benchmarked state-space decoders — Kalman filter, RTS smoother, and Preferential Subspace Identification (PSID) — to decode motor kinematics from 96-neuron primate motor cortex recordings (O'Doherty dataset). Validated Kalman optimality on the innovation sequence with Jarque-Bera and Ljung-Box tests; PSID improved velocity decoding from R2 = 0.41 (KF) to R2 = 0.48 (+16.6%)."
   tags:
     - Neural Decoding
-    - Kalman Filters
-    - State-Space Models
+    - Kalman Filter
+    - PSID
     - Python
   featured: true
 
 - title: "Automated EMG Onset Detection for Clinical Research"
   institution: "USC COOR Lab"
   date: "July 2025 - Present"
-  description: "Developed an R Shiny application for USC's NIH-funded rotator cuff tendinopathy study that automatically detects onset times across seven shoulder muscles, identifies movement repetitions, and exports 29 digital biomarkers per repetition. Reduces manual annotation from hours to minutes (~90% time savings) while maintaining HIPAA compliance."
+  description: "Developed tooling for USC's NIH-funded rotator cuff tendinopathy study that automatically detects EMG onset times across seven shoulder muscles, identifies movement repetitions, and exports per-repetition biomarkers, replacing slow manual annotation."
   tags:
     - Biosignal Processing
     - Clinical ML
-    - R Shiny
-    - HIPAA Compliance
+    - Signal Processing
   featured: true
 
-- title: "Project Alexandria - AI Research Assistant"
-  institution: "USC Information Sciences Institute"
-  date: "Sep 2025 - Present"
-  description: "Building an LLM-based research automation platform that combines retrieval-augmented generation (RAG), semantic search, and knowledge graphs to parse 1,000+ scientific papers. The system surfaces relevant insights 3× faster than manual review. Deployed using FastAPI, Docker, MLflow, and W&B for reproducible ML pipelines."
+- title: "Predictive Maintenance Lab"
+  institution: "Personal Project"
+  date: "2025"
+  description: "End-to-end sensor time-series ML system: sliding-window DSP features, XGBoost RUL (RMSE 16.80 on NASA CMAPSS) and anomaly detection (PR-AUC 1.00 on CWRU), served via FastAPI with MLflow tracking, Docker, and CI/CD on Azure Container Apps."
   tags:
-    - LLMs
-    - RAG
-    - Knowledge Graphs
-    - FastAPI
+    - Time-Series ML
     - MLOps
+    - FastAPI
+    - Docker
   featured: true
 
 - title: "EMAHA-DB: Open-Source sEMG Datasets"
   institution: "IIIT Sri City"
   date: "2022-2024"
-  description: "Led creation and public release of three sEMG datasets (EMAHA-DB4/5/7) spanning daily living activities, fine-motor tasks, and rate-varied movements across 30+ subjects. Datasets have been cited in multiple research publications."
+  description: "Led collection and public release of the EMAHA-DB4 to DB7 surface-EMG datasets spanning daily-living activities under varied measurement conditions (posture, arm position, pace). Co-author on 3 conference publications."
   tags:
     - Open Source
     - Dataset
     - sEMG
-  featured: false
-
-- title: "EMGTTL: Transformer Transfer Learning"
-  institution: "IIIT Sri City"
-  date: "2023-2024"
-  description: "Developed a transformer-based transfer learning framework for raw sEMG signal classification. Achieved 71% cross-dataset accuracy by pre-training on one dataset and fine-tuning on another, demonstrating robust generalization across different recording conditions."
-  tags:
-    - Deep Learning
-    - Transformers
-    - Transfer Learning
   featured: false
 
 - title: "Speech Phonation Mode Classification"
@@ -72,12 +60,12 @@
     - Attention Mechanisms
   featured: false
 
-- title: "MRI Preprocessing Pipeline"
+- title: "dMRI Denoising Benchmark"
   institution: "BrainSightAI"
   date: "2024"
-  description: "Designed BIDS-compliant preprocessing pipeline for diffusion and functional MRI, handling 250+ patient scans. Automated motion correction, co-registration, and tractography while reducing reconstruction error by 15% through optimized denoising algorithms (MPPCA, Patch2Self)."
+  description: "Validated a clinical diffusion-MRI pipeline and benchmarked denoising methods (MPPCA vs Patch2Self) on SNR, RMSE, and MSE; caught a spatial-artifact failure mode invisible to aggregate metrics via visual QC and recommended MPPCA for production."
   tags:
     - Neuroimaging
-    - BIDS
-    - MRI
+    - dMRI
+    - Signal Processing
   featured: false
