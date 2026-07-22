@@ -1,7 +1,69 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body class="single">
+  <div class="layout">
 
-<div class="home">
-  {{ content }}
-</div>
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <a href="#top" class="side-name">Vidya Sagar<br>Reddy Venna</a>
+        <p class="side-role">ML &amp; Signal-Processing Engineer</p>
+        <p class="side-tag">Biosignals · neural decoding · time-series ML. MS ECE (ML/DS) @ USC.</p>
+
+        <nav class="side-nav">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#publications">Publications</a>
+          <a href="#education">Education</a>
+          <a href="#writing">Writing</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="side-links">
+          <a class="resume-link" href="{{ '/assets/pdf/Vidya_Sagar_Venna_Resume.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Résumé</a>
+          <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" target="_blank" rel="noopener noreferrer">Scholar</a>
+          <a href="mailto:{{ site.author.email }}">Email</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content" id="top">
+      {{ content }}
+      <footer class="content-footer">
+        <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name }} · Los Angeles, CA</p>
+      </footer>
+    </main>
+
+  </div>
+
+  <script>
+    // Active-section highlight in the sidebar nav
+    (function () {
+      var links = Array.prototype.slice.call(document.querySelectorAll('.side-nav a'));
+      var map = {};
+      links.forEach(function (a) {
+        var id = a.getAttribute('href').slice(1);
+        var sec = document.getElementById(id);
+        if (sec) map[id] = a;
+      });
+      var sections = Object.keys(map).map(function (id) { return document.getElementById(id); });
+      if (!('IntersectionObserver' in window) || !sections.length) return;
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            links.forEach(function (l) { l.classList.remove('active'); });
+            var a = map[e.target.id];
+            if (a) a.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+      sections.forEach(function (s) { io.observe(s); });
+    })();
+  </script>
+</body>
+</html>

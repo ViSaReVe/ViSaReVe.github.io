@@ -1,9 +1,24 @@
+- title: "Scientific Knowledge Extraction"
+  institution: "USC Information Sciences Institute (ISI)"
+  date: "2025"
+  description: "End-to-end LLM pipeline that extracts structured knowledge (entities, attributes, relationships) from research PDFs, using batched inference and caching to run at scale, plus a verification step cross-checking each claim against the source text. Built the evaluation harness — multiple-choice fidelity scoring with bootstrap confidence intervals and an n-gram overlap check to flag copied text."
+  metric: "88.3%"
+  metric_label: "factual accuracy (95% CI 82.9–93.3)"
+  github: "https://github.com/ViSaReVe/alexandria-ku"
+  tags:
+    - LLM
+    - RAG
+    - Evaluation
+    - Python
+  featured: true
+
 - title: "State-Space Neural Decoding"
   institution: "USC - EE 675 Neural Engineering"
   date: "Fall 2025"
   description: "Built and benchmarked state-space decoders — Kalman filter, RTS smoother, and Preferential Subspace Identification (PSID) — to decode motor kinematics from 96-neuron primate motor cortex recordings (O'Doherty dataset). Validated Kalman optimality on the innovation sequence with Jarque-Bera and Ljung-Box tests; PSID improved velocity decoding from R2 = 0.41 (KF) to R2 = 0.48 (+16.6%)."
   metric: "R² 0.48"
   metric_label: "velocity decoding — PSID, +16.6% over Kalman"
+  github: "https://github.com/ViSaReVe/neural-decoding-benchmarks"
   tags:
     - Neural Decoding
     - Kalman Filter
@@ -29,6 +44,7 @@
   description: "End-to-end sensor time-series ML system: sliding-window DSP features, XGBoost RUL (RMSE 16.80 on NASA CMAPSS) and anomaly detection (PR-AUC 1.00 on CWRU), served via FastAPI with MLflow tracking, Docker, and CI/CD on Azure Container Apps."
   metric: "RMSE 16.80 · PR-AUC 1.00"
   metric_label: "NASA C-MAPSS RUL · CWRU fault detection"
+  github: "https://github.com/ViSaReVe/predictive-maintenance-lab"
   tags:
     - Time-Series ML
     - MLOps
@@ -74,4 +90,15 @@
     - Neuroimaging
     - dMRI
     - Signal Processing
+  featured: false
+
+- title: "Timed-Vibration Quadruped Locomotion"
+  institution: "USC - EE 579"
+  date: "2025"
+  description: "Embedded C++ firmware for a quadruped robot walking on granular terrain: implemented a Buehler-clock gait and drove DRV2605L haptic actuators for timed-vibration ground interaction, studying how vibration timing affects locomotion on loose substrate."
+  github: "https://github.com/ViSaReVe/timed-vibration-granular-locomotion"
+  tags:
+    - Embedded C++
+    - Robotics
+    - Firmware
   featured: false

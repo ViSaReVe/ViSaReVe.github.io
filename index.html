@@ -2,92 +2,123 @@
 layout: home
 ---
 
-<section class="hero">
-  <div class="container">
-    <p class="eyebrow">ML &amp; Signal-Processing Engineer</p>
-    <h1>Vidya Sagar Reddy Venna</h1>
-    <p class="lede">
-      I build end-to-end ML systems for biosignals and sensor data — neural
-      decoding, EMG signal processing, and time-series ML with MLOps. MS ECE
-      (ML &amp; Data Science) at USC.
-    </p>
-    <div class="links">
-      <a class="btn-primary" href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" target="_blank" rel="noopener noreferrer">Scholar</a>
-      <a href="mailto:{{ site.author.email }}">Email</a>
-    </div>
-  </div>
+<section id="about" class="sec">
+  <h2 class="sec-title">About</h2>
+  <p>
+    I'm a full-stack ML engineer who bridges messy hardware and sensor data and modern
+    AI — building end-to-end systems from raw neural and biosignal streams through
+    training, rigorous evaluation, and model serving (FastAPI, Docker, CI/CD). MS in ECE
+    (ML &amp; Data Science) at USC, May 2026.
+  </p>
+  <p>
+    Currently a graduate researcher at USC's COOR Lab, developing ML tooling for clinical
+    biomechanics on an NIH-funded study. I care about work that's measurable,
+    reproducible, and shipped. I'm seeking full-time ML / applied-ML roles for 2026 —
+    especially sensor ML, neurotechnology, and LLM/ML infrastructure.
+  </p>
 </section>
 
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Selected Work</h2>
-    <p class="section-sub">Real projects, real numbers.</p>
+<section id="experience" class="sec">
+  <h2 class="sec-title">Experience</h2>
+  {% for exp in site.data.experience %}
+    <div class="timeline-item">
+      <div class="ti-head">
+        <h3>{{ exp.role }}</h3>
+        <span class="ti-period">{{ exp.period }}</span>
+      </div>
+      <p class="ti-org">{{ exp.organization }}</p>
+      <p class="ti-desc">{{ exp.description }}</p>
+    </div>
+  {% endfor %}
+</section>
 
-    <div class="project-grid">
-      {% for project in site.data.projects %}
-        {% if project.featured %}
-          <article class="project-card">
-            <div class="card-head">
-              <h3>{{ project.title }}</h3>
-              <span class="meta">{{ project.institution }} · {{ project.date }}</span>
-            </div>
-            {% if project.metric %}
-              <div class="metric-row">
-                <span class="metric">{{ project.metric }}</span>
-                <span class="metric-label">{{ project.metric_label }}</span>
-              </div>
-            {% endif %}
-            <p class="desc">{{ project.description }}</p>
-            <div class="tags">
-              {% for tag in project.tags %}
-                <span class="tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
-          </article>
+<section id="projects" class="sec">
+  <h2 class="sec-title">Projects</h2>
+  <div class="project-grid">
+    {% for project in site.data.projects %}
+      <article class="project-card">
+        <div class="card-head">
+          <h3>{{ project.title }}</h3>
+          <span class="meta">{{ project.institution }} · {{ project.date }}</span>
+        </div>
+        {% if project.metric %}
+          <div class="metric-row">
+            <span class="metric">{{ project.metric }}</span>
+            <span class="metric-label">{{ project.metric_label }}</span>
+          </div>
         {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Research Interests</h2>
-    <p class="section-sub">Where I like to work.</p>
-
-    <div class="interest-grid">
-      <div class="interest">
-        <h3>🧠 Neural Decoding</h3>
-        <p>State-space models and Kalman filters for motor-cortex signal decoding.</p>
-      </div>
-      <div class="interest">
-        <h3>💪 Biosignal Processing</h3>
-        <p>EMG analysis and automated onset detection for clinical applications.</p>
-      </div>
-      <div class="interest">
-        <h3>🤖 Machine Learning</h3>
-        <p>Deep learning, state-space models, and time-series signal modeling.</p>
-      </div>
-      <div class="interest">
-        <h3>⚙️ Sensor &amp; Time-Series ML</h3>
-        <p>Predictive maintenance and end-to-end sensor-to-model pipelines.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section recent-posts">
-  <div class="container">
-    <h2 class="section-title">Writing</h2>
-    <p class="section-sub"><a href="{{ '/posts' | relative_url }}">All posts →</a></p>
-
-    {% for post in site.posts limit:3 %}
-      <div class="post-item">
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
-      </div>
+        <p class="desc">{{ project.description }}</p>
+        <div class="tags">
+          {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+        </div>
+        {% if project.github or project.demo %}
+          <div class="card-links">
+            {% if project.github %}<a href="{{ project.github }}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>{% endif %}
+            {% if project.demo %}<a href="{{ project.demo }}" target="_blank" rel="noopener noreferrer">Live demo ↗</a>{% endif %}
+          </div>
+        {% endif %}
+      </article>
     {% endfor %}
+  </div>
+</section>
+
+<section id="publications" class="sec">
+  <h2 class="sec-title">Publications</h2>
+  <ul class="pub-list">
+    {% for pub in site.data.publications %}
+      <li class="pub-item">
+        {% if pub.link %}
+          <a class="pub-title" href="{{ pub.link }}" target="_blank" rel="noopener noreferrer">{{ pub.title }} <span class="pub-arrow">↗</span></a>
+        {% else %}
+          <span class="pub-title">{{ pub.title }}</span>
+        {% endif %}
+        <span class="pub-authors">{{ pub.authors }}</span>
+        <span class="pub-venue">{{ pub.venue }}{% unless pub.venue contains pub.year %} · {{ pub.year }}{% endunless %}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="education" class="sec">
+  <h2 class="sec-title">Education</h2>
+  <div class="timeline-item">
+    <div class="ti-head">
+      <h3>M.S., Electrical &amp; Computer Engineering (ML / DS)</h3>
+      <span class="ti-period">Aug 2024 – May 2026</span>
+    </div>
+    <p class="ti-org">University of Southern California · Los Angeles, CA</p>
+  </div>
+  <div class="timeline-item">
+    <div class="ti-head">
+      <h3>B.Tech (Honours), Electronics &amp; Communication Engineering</h3>
+      <span class="ti-period">Aug 2020 – May 2024</span>
+    </div>
+    <p class="ti-org">Indian Institute of Information Technology Sri City · Sri City, India</p>
+  </div>
+</section>
+
+<section id="writing" class="sec">
+  <h2 class="sec-title">Writing</h2>
+  <div class="writing-list">
+    {% for post in site.posts limit:4 %}
+      <a class="writing-item" href="{{ post.url | relative_url }}">
+        <span class="wi-title">{{ post.title }}</span>
+        <span class="wi-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="contact" class="sec">
+  <h2 class="sec-title">Contact</h2>
+  <p>
+    Open to full-time ML / signal-processing roles for 2026. The fastest way to reach me
+    is email — I read everything.
+  </p>
+  <div class="contact-links">
+    <a class="btn-primary" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+    <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" target="_blank" rel="noopener noreferrer">Scholar</a>
   </div>
 </section>

@@ -2,16 +2,19 @@
   authors: "Vidya Sagar, Anish Turlapaty, Surya Naidu"
   venue: "ISPA 2023"
   year: 2023
+  link: "https://ieeexplore.ieee.org/document/10279445"
 
 - title: "Classification of Fine-ADL using sEMG signals under different measurement conditions"
   authors: "Surya Naidu, Anish Turlapaty, Vidya Sagar"
   venue: "BIOSIGNALS 2024"
   year: 2024
+  link: "https://doi.org/10.5220/0012346000003657"
 
 - title: "Impact of Activity Pace and Arm Position on Classification of ADLs"
   authors: "Sayee G B, Anish Turlapaty, Surya Naidu, Vidya Sagar"
   venue: "EMBC 2024"
   year: 2024
+  link: "https://doi.org/10.1109/EMBC53108.2024.10782913"
 
 - title: "Nanomagnetic Logic Simulation of Digital Design"
   authors: "Vidya Sagar (co-author)"
