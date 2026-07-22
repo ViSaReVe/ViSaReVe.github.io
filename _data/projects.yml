@@ -52,16 +52,6 @@
     - Docker
   featured: true
 
-- title: "EMAHA-DB: Open-Source sEMG Datasets"
-  institution: "IIIT Sri City"
-  date: "2022-2024"
-  description: "Led collection and public release of the EMAHA-DB4 to DB7 surface-EMG datasets spanning daily-living activities under varied measurement conditions (posture, arm position, pace). Co-author on 3 conference publications."
-  tags:
-    - Open Source
-    - Dataset
-    - sEMG
-  featured: false
-
 - title: "Speech Phonation Mode Classification"
   institution: "Personal Project"
   date: "2024"
@@ -70,26 +60,6 @@
     - Audio Processing
     - Self-Supervised Learning
     - HuBERT
-  featured: false
-
-- title: "AI4PAIN 2025: Multimodal Pain Assessment"
-  institution: "Research Challenge"
-  date: "2024-2025"
-  description: "Developed an attention-based CNN-Transformer fusion model for multimodal pain assessment using raw physiological signals (EDA, BVP, RESP, SpO2). Outperformed the challenge baseline by 12.4% balanced accuracy on a 65-subject clinical dataset."
-  tags:
-    - Multimodal ML
-    - Physiological Signals
-    - Attention Mechanisms
-  featured: false
-
-- title: "dMRI Denoising Benchmark"
-  institution: "BrainSightAI"
-  date: "2024"
-  description: "Validated a clinical diffusion-MRI pipeline and benchmarked denoising methods (MPPCA vs Patch2Self) on SNR, RMSE, and MSE; caught a spatial-artifact failure mode invisible to aggregate metrics via visual QC and recommended MPPCA for production."
-  tags:
-    - Neuroimaging
-    - dMRI
-    - Signal Processing
   featured: false
 
 - title: "Timed-Vibration Quadruped Locomotion"
