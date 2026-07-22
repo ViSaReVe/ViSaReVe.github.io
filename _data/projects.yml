@@ -2,6 +2,8 @@
   institution: "USC - EE 675 Neural Engineering"
   date: "Fall 2025"
   description: "Built and benchmarked state-space decoders — Kalman filter, RTS smoother, and Preferential Subspace Identification (PSID) — to decode motor kinematics from 96-neuron primate motor cortex recordings (O'Doherty dataset). Validated Kalman optimality on the innovation sequence with Jarque-Bera and Ljung-Box tests; PSID improved velocity decoding from R2 = 0.41 (KF) to R2 = 0.48 (+16.6%)."
+  metric: "R² 0.48"
+  metric_label: "velocity decoding — PSID, +16.6% over Kalman"
   tags:
     - Neural Decoding
     - Kalman Filter
@@ -13,6 +15,8 @@
   institution: "USC COOR Lab"
   date: "July 2025 - Present"
   description: "Developed tooling for USC's NIH-funded rotator cuff tendinopathy study that automatically detects EMG onset times across seven shoulder muscles, identifies movement repetitions, and exports per-repetition biomarkers, replacing slow manual annotation."
+  metric: "7 muscles"
+  metric_label: "automated EMG onset & per-rep biomarkers — NIH study"
   tags:
     - Biosignal Processing
     - Clinical ML
@@ -23,6 +27,8 @@
   institution: "Personal Project"
   date: "2025"
   description: "End-to-end sensor time-series ML system: sliding-window DSP features, XGBoost RUL (RMSE 16.80 on NASA CMAPSS) and anomaly detection (PR-AUC 1.00 on CWRU), served via FastAPI with MLflow tracking, Docker, and CI/CD on Azure Container Apps."
+  metric: "RMSE 16.80 · PR-AUC 1.00"
+  metric_label: "NASA C-MAPSS RUL · CWRU fault detection"
   tags:
     - Time-Series ML
     - MLOps
