@@ -1,6 +1,6 @@
 # Blog Post Template
 
-Copy this entire file content when creating a new blog post in `_posts/` folder.
+Copy only the front matter and post body from the example below when creating a new blog post in `_posts/` folder.
 
 **Filename format:** `YYYY-MM-DD-your-post-title.md`
 
@@ -17,6 +17,10 @@ categories: [tutorial, research, career, tools]
 tags: [tag1, tag2, tag3]
 excerpt: "One-line description of your post (shows on blog listing page)"
 reading_time: 5
+cover: /assets/img/covers/emg-python.svg
+cover_theme: peach
+card_title: "Short title for the cover"
+card_description: "One sentence that invites a reader in."
 ---
 
 Your intro paragraph goes here. This should hook the reader and explain what they'll learn from this post.

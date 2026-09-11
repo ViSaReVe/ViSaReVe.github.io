@@ -1,0 +1,15 @@
+{% assign item = include.media %}
+<figure class="media-figure">
+{% if item.type == 'video' %}
+  <video controls playsinline preload="metadata"{% if item.poster %} poster="{{ item.poster | relative_url }}"{% endif %}{% if item.label %} aria-label="{{ item.label | escape }}"{% endif %}>
+    <source src="{{ item.src | relative_url }}" type="{{ item.mime | default: 'video/mp4' }}">
+    {% if item.captions %}<track kind="captions" src="{{ item.captions | relative_url }}" srclang="en" label="English" default>{% endif %}
+    Your browser does not support embedded video. <a href="{{ item.src | relative_url }}">Download the clip</a>.
+  </video>
+{% elsif item.type == 'youtube' %}
+  <iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/{{ item.id | escape }}" title="{{ item.label | default: 'Project video' | escape }}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% else %}
+  <img src="{{ item.src | relative_url }}" alt="{{ item.alt | escape }}" loading="lazy"{% if item.width %} width="{{ item.width }}"{% endif %}{% if item.height %} height="{{ item.height }}"{% endif %}>
+{% endif %}
+{% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}
+</figure>

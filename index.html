@@ -1,171 +1,46 @@
 ---
 layout: home
 ---
-
-<section id="about" class="sec">
-  <h2 class="sec-title">About</h2>
-  <p>
-    I'm a full-stack ML engineer who bridges messy hardware and sensor data and modern
-    AI — building end-to-end systems from raw neural and biosignal streams through
-    training, rigorous evaluation, and model serving (FastAPI, Docker, CI/CD). MS in ECE
-    (ML &amp; Data Science) at USC, May 2026.
-  </p>
-  <p>
-    Currently a graduate researcher at USC's COOR Lab, developing ML tooling for clinical
-    biomechanics on an NIH-funded study. I care about work that's measurable,
-    reproducible, and shipped. I'm seeking full-time ML / applied-ML roles for 2026 —
-    especially sensor ML, neurotechnology, and LLM/ML infrastructure.
-  </p>
-
-  <div class="stats">
-    <div class="stat"><span class="stat-num">3</span><span class="stat-label">Peer-reviewed papers</span></div>
-    <div class="stat"><span class="stat-num">4</span><span class="stat-label">Public sEMG datasets released</span></div>
-    <div class="stat"><span class="stat-num">88.3%</span><span class="stat-label">ISI factual accuracy</span></div>
-    <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Years research experience</span></div>
+<section class="panel intro" id="about" aria-labelledby="intro-title">
+  <div class="personal-seal" aria-hidden="true"><span>FROM SIGNAL TO SYSTEM</span><b>v.</b><span>LOS ANGELES, CA</span></div>
+  <div class="intro-copy">
+    <h2 id="intro-title">Hey, I’m Visare.</h2>
+    <p>I’m an <strong>ML engineer</strong> working with signals from muscles, brains, and sensors.</p>
+    <p>I build end-to-end systems—from raw neural and biosignal streams to training, evaluation, and model serving.</p>
+    <p>I care about work that’s measurable, reproducible, and shipped.</p>
   </div>
-</section>
-
-<section id="experience" class="sec">
-  <h2 class="sec-title">Experience</h2>
-  {% for exp in site.data.experience %}
-    <div class="timeline-item{% if exp.logo %} has-logo{% endif %}">
-      {% if exp.logo %}
-        {% if exp.url %}<a class="ti-logo-link" href="{{ exp.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ exp.organization }} website">{% endif %}
-        <img class="ti-logo" src="{{ exp.logo | relative_url }}" alt="{{ exp.organization }}" width="44" height="44" loading="lazy">
-        {% if exp.url %}</a>{% endif %}
-      {% endif %}
-      <div class="ti-body">
-        <div class="ti-head">
-          <h3>{{ exp.role }}</h3>
-          <span class="ti-period">{{ exp.period }}</span>
-        </div>
-        <p class="ti-org">
-          {%- if exp.url -%}
-            <a href="{{ exp.url }}" target="_blank" rel="noopener noreferrer">{{ exp.organization }} <span class="ti-arrow">↗</span></a>
-          {%- else -%}
-            {{ exp.organization }}
-          {%- endif -%}
-        </p>
-        {% if exp.highlights %}
-          <ul class="ti-bullets">
-            {% for h in exp.highlights %}<li>{{ h }}</li>{% endfor %}
-          </ul>
-        {% else %}
-          <p class="ti-desc">{{ exp.description }}</p>
-        {% endif %}
-      </div>
-    </div>
-  {% endfor %}
-</section>
-
-<section id="projects" class="sec">
-  <h2 class="sec-title">Projects</h2>
-  <div class="project-grid">
-    {% for project in site.data.projects %}
-      <article class="project-card">
-        <div class="card-head">
-          {% if project.category %}<span class="card-cat">{{ project.category }}</span>{% endif %}
-          <h3>{{ project.title }}</h3>
-          <span class="meta">{{ project.institution }} · {{ project.date }}</span>
-        </div>
-        {% if project.metric %}
-          <div class="metric-row">
-            <span class="metric">{{ project.metric }}</span>
-            <span class="metric-label">{{ project.metric_label }}</span>
-          </div>
-        {% endif %}
-        <p class="desc">{{ project.description }}</p>
-        <div class="tags">
-          {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
-        </div>
-        {% if project.github or project.demo %}
-          <div class="card-links">
-            {% if project.github %}<a href="{{ project.github }}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>{% endif %}
-            {% if project.demo %}<a href="{{ project.demo }}" target="_blank" rel="noopener noreferrer">Live demo ↗</a>{% endif %}
-          </div>
-        {% endif %}
-      </article>
-    {% endfor %}
+  <div class="affiliations">
+    <div class="affiliation now"><span class="status-label">Now</span><div class="affiliation-links"><a href="https://www.isi.edu"><img src="{{ '/assets/img/logos/usc-isi.png' | relative_url }}" width="24" height="24" alt="">USC ISI / Alexandria</a><span class="separator">·</span><a href="https://sites.usc.edu/coorlab/"><img src="{{ '/assets/img/logos/coor-usc.png' | relative_url }}" width="24" height="24" alt="">USC COOR Lab</a></div></div>
+    <div class="affiliation"><span class="status-label">Previously</span><div class="affiliation-links"><a href="https://www.brainsightai.com"><img src="{{ '/assets/img/logos/brainsightai.png' | relative_url }}" width="24" height="24" alt="">BrainSightAI</a><span class="separator">·</span><a href="https://www.linkedin.com/company/hma-lab-iiits/"><img src="{{ '/assets/img/logos/hmal-iiit.png' | relative_url }}" width="24" height="24" alt="">HMA Lab, IIIT Sri City</a></div></div>
   </div>
-</section>
-
-<section id="skills" class="sec">
-  <h2 class="sec-title">Skills</h2>
-  <div class="skill-groups">
-    {% for g in site.data.skills %}
-      <div class="skill-group">
-        <span class="skill-label">{{ g.group }}</span>
-        <div class="skill-tags">
-          {% for item in g.items %}<span class="skill-tag">{{ item }}</span>{% endfor %}
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-</section>
-
-<section id="publications" class="sec">
-  <h2 class="sec-title">Publications</h2>
-  <ul class="pub-list">
-    {% for pub in site.data.publications %}
-      <li class="pub-item">
-        {% if pub.link %}
-          <a class="pub-title" href="{{ pub.link }}" target="_blank" rel="noopener noreferrer">{{ pub.title }} <span class="pub-arrow">↗</span></a>
-        {% else %}
-          <span class="pub-title">{{ pub.title }}</span>
-        {% endif %}
-        <span class="pub-authors">{{ pub.authors }}</span>
-        <span class="pub-venue">{{ pub.venue }}{% unless pub.venue contains pub.year %} · {{ pub.year }}{% endunless %}</span>
-      </li>
-    {% endfor %}
+  <p class="highlights-intro">A few things I’m proud of:</p>
+  <ul class="highlights">
+    <li><span aria-hidden="true">📄</span><span>Published <a href="{{ '/about/#publications' | relative_url }}">three IEEE papers</a> on classifying daily activities from muscle signals — two in Rome, one in the US — carrying each one from problem statement to publication.</span></li>
+    <li><span aria-hidden="true">🧪</span><span>Ran the two-year collection behind <a href="https://www.kaggle.com/datasets/anishturlapaty/emaha-db4">EMAHA-DB4</a>–<a href="https://www.kaggle.com/datasets/anishturlapaty/emaha-db7">DB7</a>: recruited and recorded 70 subjects, then released all four datasets publicly on Kaggle and Harvard Dataverse for other labs to build on.</span></li>
+    <li><span aria-hidden="true">🐛</span><span>Found and fixed a <a href="https://github.com/cupy/cupy/pull/10139">signal-processing bug in CuPy</a> — <code>bilinear</code> was quietly sensitive to leading zeros — plus <a href="https://github.com/cupy/cupy/pull/10138">a missing API doc</a>; both merged upstream.</span></li>
+    <li><span aria-hidden="true">🔍</span><span>Caught a denoising failure at BrainSightAI that SNR and RMSE both passed — visible only on rendered FA maps — and changed the production default on that evidence.</span></li>
   </ul>
+  {% include social-links.html %}
 </section>
 
-<section id="education" class="sec">
-  <h2 class="sec-title">Education</h2>
-  <div class="timeline-item">
-    <div class="ti-head">
-      <h3>M.S., Electrical &amp; Computer Engineering (ML / DS)</h3>
-      <span class="ti-period">Aug 2024 – May 2026</span>
-    </div>
-    <p class="ti-org">University of Southern California · Los Angeles, CA</p>
-  </div>
-  <div class="timeline-item">
-    <div class="ti-head">
-      <h3>B.Tech (Honours), Electronics &amp; Communication Engineering</h3>
-      <span class="ti-period">Aug 2020 – May 2024</span>
-    </div>
-    <p class="ti-org">Indian Institute of Information Technology Sri City · Sri City, India</p>
+<section class="panel" id="projects" aria-labelledby="work-title">
+  <div class="section-heading"><div><p class="eyebrow">A collection of experiments</p><h2 id="work-title">Selected work</h2></div><span class="section-index" aria-hidden="true">01 — 06</span></div>
+  <p class="section-description">Things I’ve built, measured, and learned from.</p>
+  <div class="project-grid">
+    {% assign projects = site.projects | sort: 'order' %}
+    {% for project in projects %}{% include project-card.html project=project %}{% endfor %}
   </div>
 </section>
 
-<section id="writing" class="sec">
-  <h2 class="sec-title">Writing</h2>
-  <div class="writing-list">
-    {% for post in site.posts %}
-      <details class="writing-item">
-        <summary>
-          <span class="wi-title">{{ post.title }}</span>
-          <span class="wi-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-          <span class="wi-chevron" aria-hidden="true">›</span>
-        </summary>
-        <div class="wi-body post-content">
-          {{ post.content }}
-        </div>
-      </details>
-    {% endfor %}
-  </div>
+<section class="panel" id="writing" aria-labelledby="writing-title">
+  <div class="section-heading"><div><p class="eyebrow">Notes from the work</p><h2 id="writing-title">Writing</h2></div><a class="small-link" href="{{ '/posts/' | relative_url }}">All posts ↗</a></div>
+  <p class="section-description">Research notes, practical guides, and things worth sharing.</p>
+  <div class="writing-grid">{% for post in site.posts limit:2 %}{% include writing-card.html post=post %}{% endfor %}</div>
 </section>
 
-<section id="contact" class="sec">
-  <h2 class="sec-title">Contact</h2>
-  <p>
-    Open to full-time ML / signal-processing roles for 2026. The fastest way to reach me
-    is email — I read everything.
-  </p>
-  <div class="contact-links">
-    <a class="btn-primary" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
-    <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" target="_blank" rel="noopener noreferrer">Scholar</a>
-  </div>
+<section class="panel contact-panel" id="contact" aria-labelledby="contact-title">
+  <p class="eyebrow">Get in touch</p><h2 id="contact-title">Let’s make something useful.</h2>
+  <p>Open to full-time ML / signal-processing roles for 2026, especially sensor ML, neurotechnology, and ML infrastructure.</p>
+  <a class="contact-email" href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a>
+  <div class="contact-other"><a href="https://github.com/{{ site.author.github }}">GitHub ↗</a><a href="https://linkedin.com/in/{{ site.author.linkedin }}">LinkedIn ↗</a><a href="https://scholar.google.com/citations?user={{ site.author.scholar }}">Scholar ↗</a><a href="{{ '/assets/pdf/Vidya_Sagar_Venna_Resume.pdf' | relative_url }}">Résumé ↗</a></div>
 </section>

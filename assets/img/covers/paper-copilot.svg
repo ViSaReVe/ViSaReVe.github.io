@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">Papers and connected citations</title><desc id="desc">Conceptual illustration of a stack of research papers connected to a citation graph. The line plot is decorative, not measured data.</desc>
+<defs>
+ <pattern id="grain" width="11" height="13" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".6" fill="#485b43" opacity=".12"/><circle cx="9" cy="8" r=".4" fill="#485b43" opacity=".1"/></pattern>
+ <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#485b43" stroke-opacity=".08" stroke-width="1"/></pattern>
+ <filter id="shadow" x="-30%" y="-30%" width="180%" height="180%"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#485b43" flood-opacity=".12"/></filter>
+</defs>
+<path fill="#e6eadc" d="M0 0h1200v800H0z"/>
+<path fill="url(#grain)" d="M0 0h1200v800H0z"/>
+<circle cx="1000" cy="70" r="410" fill="#d9e0cf"/><circle cx="160" cy="800" r="350" fill="#c3cfb5"/><path d="M0 650C300 580 470 760 740 675S1020 620 1200 660" fill="none" stroke="#8b9b77" stroke-width="2"/>
+<g transform="translate(300 128) rotate(-12 250 250)" filter="url(#shadow)"><rect x="-30" y="35" width="400" height="505" rx="8" fill="#b7c3a8"/><rect x="-15" y="18" width="400" height="505" rx="8" fill="#e4e8d8"/><rect width="400" height="505" rx="8" fill="#faf8ef"/>
+<rect x="42" y="48" width="56" height="12" rx="6" fill="#74896c"/><path d="M42 100h272M42 123h235" stroke="#4a6148" stroke-width="9"/><path d="M42 171h310M42 190h283M42 209h300M42 228h280" stroke="#c7cfbd" stroke-width="5"/>
+<rect x="40" y="264" width="320" height="121" fill="#e8ecdf"/><path d="M60 352C90 305 113 370 148 315S199 354 238 304 281 349 338 286" fill="none" stroke="#7c956f" stroke-width="4"/>
+<path d="M42 422h290M42 441h312M42 460h200" stroke="#c7cfbd" stroke-width="5"/></g>
+<g stroke="#687e60" fill="none" stroke-width="3"><path d="M689 277C761 180 827 187 892 264M698 468C775 395 838 474 877 398M723 345L1010 365M914 276L1010 365 907 507M882 397L907 507" stroke-dasharray="5 8"/></g>
+<g fill="#f7f8ef" stroke="#738766" stroke-width="3"><circle cx="900" cy="257" r="42"/><circle cx="1020" cy="365" r="31"/><circle cx="884" cy="393" r="35"/><circle cx="916" cy="520" r="45"/></g>
+<g stroke="#738766" stroke-width="4"><path d="M883 247h32m-32 10h22m-22 10h29M1008 358h23m-23 11h16M871 387h25m-25 10h20M898 510h36m-36 11h30m-30 11h19"/></g>
+</svg>

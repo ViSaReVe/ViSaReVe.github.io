@@ -1,6 +1,7 @@
 # Site settings
-title: "Vidya Sagar Reddy Venna"
-description: "ML engineer working on biosignals, neural decoding, and time-series ML. MS ECE (ML & Data Science) at USC, May 2026."
+title: "Vi Sa Re Ve"
+brand_name: "Vi Sa Re Ve"
+description: "Vidya Sagar Reddy Venna (Vi Sa Re Ve) — ML engineer working on biosignals, neural decoding, and time-series ML. MS ECE (ML & Data Science) at USC, May 2026."
 tagline: "ML & Signal-Processing Engineer"
 url: "https://visareve.github.io"
 baseurl: ""
@@ -55,3 +56,9 @@ defaults:
     values:
       layout: "page"
       image: "/assets/img/og-card.png"
+
+# Each project becomes a real page, built by native GitHub Pages Jekyll.
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/

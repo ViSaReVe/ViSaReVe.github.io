@@ -6,6 +6,10 @@ categories: [tutorial]
 tags: [biosignals, python, emg]
 excerpt: "Surface electromyography (sEMG) signals provide a window into muscle activation patterns. In this tutorial, we'll explore the fundamentals of processing EMG signals using Python, from raw data acquisition to feature extraction."
 reading_time: 5
+cover: /assets/img/covers/emg-python.svg
+cover_theme: peach
+card_title: "Making sense of muscle signals"
+card_description: "A practical guide to EMG processing in Python."
 ---
 
 Surface electromyography (sEMG) signals provide a window into muscle activation patterns. In this tutorial, we'll explore the fundamentals of processing EMG signals using Python, from raw data acquisition to feature extraction.

@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="project-article">
+  <header class="article-header reading-width">
+    <a class="back-link" href="{{ '/#projects' | relative_url }}">← Selected work</a>
+    <p class="eyebrow">{{ page.category }} · {{ page.year }}</p>
+    <h1>{{ page.title }}</h1><p class="article-subtitle">{{ page.subtitle }}</p>
+    <p class="article-meta">{{ page.institution }} · {{ page.period }}</p>
+    {% if page.github or page.demo %}<div class="article-links">{% if page.github %}<a href="{{ page.github }}">View code on GitHub ↗</a>{% endif %}{% if page.demo %}<a href="{{ page.demo }}">Live demo ↗</a>{% endif %}</div>{% endif %}
+  </header>
+  <figure class="project-hero"><img src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt }}" width="1200" height="800">{% if page.cover_caption %}<figcaption>{{ page.cover_caption }}</figcaption>{% endif %}</figure>
+  <div class="reading-width prose">{{ content }}
+    {% if page.media %}<div class="project-media">{% for item in page.media %}{% include media.html media=item %}{% endfor %}</div>{% endif %}
+    {% if page.tags %}<div class="project-tools"><h2>Built with</h2><p>{{ page.tags | join: ' · ' }}</p></div>{% endif %}
+  </div>
+  <nav class="article-bottom reading-width" aria-label="Project navigation"><a href="{{ '/#projects' | relative_url }}">← All projects</a>{% assign ordered = site.projects | sort: 'order' %}{% for item in ordered %}{% if item.order > page.order %}<a href="{{ item.url | relative_url }}">{{ item.card_title }} →</a>{% break %}{% endif %}{% endfor %}</nav>
+</article>

@@ -1,0 +1,6 @@
+<a class="project-card{% if include.project.wide %} project-card--wide{% endif %}" href="{{ include.project.url | relative_url }}">
+  <img class="project-cover" src="{{ include.project.cover | relative_url }}" alt="" loading="lazy" width="1200" height="800">
+  <span class="cover-year">{{ include.project.year }}</span>
+  <span class="cover-arrow" aria-hidden="true">↗</span>
+  <div class="cover-label"><h3>{{ include.project.card_title }}</h3><p>{{ include.project.subtitle }}</p></div>
+</a>

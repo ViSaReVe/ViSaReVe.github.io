@@ -6,6 +6,10 @@ categories: [research]
 tags: [biosignals, emg, datasets, neural-interface, machine-learning]
 excerpt: "The EMAHA sEMG datasets I helped build, what our papers found about measurement conditions, and where EMG is headed in 2026 — Meta's Neural Band, foundation models, dry electrodes, and the open problems."
 reading_time: 12
+cover: /assets/img/covers/emg-field-notes.svg
+cover_theme: sage
+card_title: "Reading between the signals"
+card_description: "From research datasets to neural interfaces."
 ---
 
 > I collected and published the **EMAHA** surface-EMG datasets (DB4–DB7) and co-authored the papers on how

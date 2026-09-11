@@ -1,20 +1,6 @@
 ---
 layout: default
-title: Posts
+title: Writing
+permalink: /posts/
 ---
-
-<div class="posts-list">
-  <div class="container">
-    <h1>Posts</h1>
-
-    {% for post in site.posts %}
-      <div class="post-item">
-        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-        <p class="post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
-        {% if post.excerpt %}
-          <p class="excerpt">{{ post.excerpt }}</p>
-        {% endif %}
-      </div>
-    {% endfor %}
-  </div>
-</div>
+<div class="shell writing-index"><header class="article-header"><a class="back-link" href="{{ '/' | relative_url }}">← Home</a><p class="eyebrow">Notes from the work</p><h1>Writing</h1><p class="article-subtitle">Research notes, practical guides, and things worth sharing.</p></header><div class="writing-grid">{% for post in site.posts %}{% include writing-card.html post=post %}{% endfor %}</div><p class="rss-note">Follow along with <a href="{{ '/feed.xml' | relative_url }}">RSS ↗</a></p></div>

@@ -1,11 +1,12 @@
-<nav class="site-nav">
-  <div class="container">
-    <a href="{{ '/' | relative_url }}" class="logo">Vidya Sagar</a>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header{% if include.hero %} site-header--hero{% endif %}">
+  <nav class="nav-inner" aria-label="Main navigation">
+    <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Vi Sa Re Ve, home">Vi Sa Re Ve<span>.</span></a>
     <div class="nav-links">
-      <a href="{{ '/#projects' | relative_url }}">Projects</a>
-      <a href="{{ '/#publications' | relative_url }}">Publications</a>
-      <a href="{{ '/posts' | relative_url }}">Writing</a>
-      <a href="{{ '/#contact' | relative_url }}">Contact</a>
+      <a href="{{ '/#projects' | relative_url }}">work</a>
+      <a href="{{ '/#writing' | relative_url }}">writing</a>
+      <a href="{{ '/about/' | relative_url }}">about</a>
+      <a href="{{ '/#contact' | relative_url }}">contact</a>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>

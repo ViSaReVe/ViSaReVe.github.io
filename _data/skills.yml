@@ -52,3 +52,11 @@
     - Azure
     - GCP
     - Spark
+
+- group: "Biomedical & Neuroimaging"
+  items:
+    - BIDS
+    - FSL
+    - sEMG processing
+    - Motion capture
+    - HIPAA compliance

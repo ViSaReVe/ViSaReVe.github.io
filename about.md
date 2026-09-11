@@ -1,6 +1,7 @@
 ---
 layout: page
-title: About
+title: A little more about me
+permalink: /about/
 ---
 
 I'm a Master's student in Electrical and Computer Engineering at the University of Southern California, specializing in Machine Learning and Data Science. My research sits at the intersection of neurotechnology, biosignal processing, and artificial intelligence.
@@ -9,51 +10,35 @@ Currently, I work as a graduate researcher at USC's COOR Lab, where I develop ML
 
 ## Education
 
-**University of Southern California**
-M.S. in Electrical and Computer Engineering (ML/DS Track)
-Aug 2024 - May 2026 (expected) | Los Angeles, CA
+<div class="publication-entry"><h3>University of Southern California</h3><p>M.S. in Electrical and Computer Engineering (ML/DS Track)<br><em>Aug 2024 - May 2026 (expected) · Los Angeles, CA</em></p></div>
 
-**Indian Institute of Information Technology Sri City**
-B.Tech (Honours) in Electronics and Communications Engineering
-Aug 2020 - May 2024 | Sri City, India
+<div class="publication-entry"><h3>Indian Institute of Information Technology Sri City</h3><p>B.Tech (Honours) in Electronics and Communications Engineering<br><em>Aug 2020 - May 2024 · Sri City, India</em></p></div>
 
 ## Experience
 
 {% for exp in site.data.experience %}
-**{{ exp.organization }}**
-{{ exp.role }}
-{{ exp.period }}
-{{ exp.description }}
-
+<section class="experience-entry">
+<div class="experience-heading"><img src="{{ exp.logo | relative_url }}" alt="" width="40" height="40" loading="lazy"><div><h3><a href="{{ exp.url }}">{{ exp.organization }}</a></h3><p>{{ exp.role }} · {{ exp.period }}</p></div></div>
+<ul>{% for highlight in exp.highlights %}<li>{{ highlight }}</li>{% endfor %}</ul>
+</section>
 {% endfor %}
 
 ## Publications
 
 {% for pub in site.data.publications %}
-**{{ pub.title }}**
-{{ pub.authors }}
-*{{ pub.venue }}* ({{ pub.year }})
-
+<div class="publication-entry"><h3>{% if pub.link %}<a href="{{ pub.link }}">{{ pub.title }} ↗</a>{% else %}{{ pub.title }}{% endif %}</h3><p>{{ pub.authors }}<br><em>{{ pub.venue }}{% unless pub.venue contains pub.year %} · {{ pub.year }}{% endunless %}</em></p></div>
 {% endfor %}
 
 ## Projects
 
-{% for project in site.data.projects %}
-**{{ project.title }}**
-{{ project.institution }} | {{ project.date }}
-{{ project.description }}
-
-{% endfor %}
+Explore the [project collection]({{ '/#projects' | relative_url }}) for selected work in neural decoding, biosignals, and ML systems.
 
 ## Technical Skills
 
-**Programming:** Python, C++, MATLAB, SQL, R
+{% for group in site.data.skills %}
+**{{ group.group }}:** {{ group.items | join: ', ' }}
 
-**ML & Deep Learning:** PyTorch, Deep Learning, State-Space Models, Time-Series ML, Model Evaluation
-
-**Tools & Frameworks:** scikit-learn, FastAPI, Docker, MLflow, Git/GitHub
-
-**Biomedical & Neuroimaging:** BIDS, FSL, sEMG Processing, Motion Capture, HIPAA Compliance
+{% endfor %}
 
 ## Beyond Research
 
