@@ -22,6 +22,10 @@ media:
     poster: "/assets/img/quadruped/granular-walk-poster.jpg"
     label: "Full locomotion run on the granular testbed"
     caption: "Full test run on the granular medium — the timed-vibration gait carrying the quadruped across the bead bed."
+  - type: video
+    src: "/assets/vid/quadruped/bead-run.mp4"
+    label: "Bead testbed run"
+    caption: "Early testbed run — the quadruped over the bead trough, before the full granular trials."
   - src: "/assets/img/quadruped/chassis-wide.jpg"
     alt: "Quadruped chassis on the work mat"
     caption: "Full chassis on the bench — four Dynamixel XL-320 servos, Arduino-compatible controller, Li-ion pack."
