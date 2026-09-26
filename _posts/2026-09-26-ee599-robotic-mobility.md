@@ -16,47 +16,11 @@ EE 599: Robotic Mobility, taught by Prof. Feifei Qian in Fall 2025, was the most
 
 This is the full retrospective: the labs, the project, the teaching, and what stuck.
 
-## The course, on paper
+## The shape of it
 
-Officially it's **EE 599: Robotic Mobility** — 4 units, Tuesday lectures, Thursday labs in EEB B18, aimed at first- and second-year PhD students. No required textbook. Lectures drawn from research articles. TA Xingjue Liao ran the Thursday lab sessions.
+Looking back, three ideas ran underneath the whole semester, and I only saw the pattern clearly when I wrote my study guide at the end: **template-based control** (parameterized clocks that generate gaits), **geometric mechanics** (shape-space geometry that predicts and optimizes motion), and **dynamic locomotion** (energy exchange and stability analysis). Everything I learned was one of those three wearing different clothes.
 
-The grading breakdown told you everything about the course's philosophy before the first lecture did:
-
-- Homework: 20%
-- Hands-on labs: 30%
-- Paper presentations: 10%
-- **Team project: 40%**
-
-Seventy percent of the grade was building things and defending what you built. The syllabus also had a line I've never seen anywhere else stated that bluntly: **generative AI is not permitted — using it counts as plagiarism.** Everything below was derived by hand. In retrospect, that rule is half the reason the course worked.
-
-The fifteen-week arc:
-
-1. **Overview** — locomotion types, bio-inspiration
-2. **Mobility types** — walking, running, hopping, climbing, crawling, digging, burrowing, swimming, flying
-3. **Gait generation and control** — legged and legless
-4. **Kinematics** — forward/inverse kinematics for multi-DoF legs
-5–6. **Geometric mechanics** — motion planning via shape-space geometry
-7. **Templates and anchors** — analyzing complex locomotion with simple models
-8. **Walking dynamics** — the rimless wheel model
-9. **Running dynamics** — the spring-loaded inverted pendulum, hopper control
-10–11. **Terrain adaptation** — deformable terrains, granular media
-12–13. **Terrain adaptation** — rough terrains
-14. Wrap-up
-15. **Project demos**
-
-Three ideas ran underneath all of it, and I only saw the pattern clearly when I wrote my study guide at the end of the semester: **template-based control** (parameterized clocks that generate gaits), **geometric mechanics** (shape-space geometry that predicts and optimizes motion), and **dynamic locomotion** (energy exchange and stability analysis). Everything in the course was one of those three wearing different clothes.
-
-## Her teaching
-
-Prof. Qian teaches the way her lab works. I know this because she kept bringing her lab into the classroom.
-
-The Thursday of the walking-dynamics unit, she handed the lecture to her postdoc Diego Caparale — a guy who spent his PhD building quadrupeds with *twisting spines* for parkour-style agile locomotion and now works on her lab's quadrupeds-for-planetary-exploration project. His opening move wasn't a slide. It was a question: *"What did you guys know about walking? And walking as opposed to running — what's the difference?"* Then he built the whole unit from the answers: walking is an inverted pendulum, gravitational energy trading with kinetic energy; running is a spring, loading and releasing. Same curves, reversed mechanisms.
-
-That was the pattern all semester. Announcements and logistics first, always clear. Then the concept, built from something physical. Then the math, only after the physical picture existed. Then — and this is the part most courses skip — the lab on Thursday where you touched the thing the math described.
-
-She also structured the project like actual research, not a class assignment: teams of three, ten weeks, checkpoints every two weeks (literature review and hypothesis → robot design and experiment plan → preliminary results → final report), and the final deliverable was a **conference-paper-style manuscript** plus a live demo. My team's final report is written like a real paper because the course demanded a real paper.
-
-And the review questions in the labs were designed to catch memorization. My favorite, from Lab 3: *"Tommy Trojan designed two gaits with the same radius but different centers — which produces larger forward displacement, and why?"* You can't answer that from notes. You have to read your own height function plot and reason from it.
+The rhythm that made it stick: watch the thing move, build the physical picture, write the math, then test it on hardware. Every unit followed that order. It's the order I still use when I'm learning something hard.
 
 ## Lab 1: learning to speak servo
 
@@ -105,19 +69,17 @@ And then Task 4: take the gaits to hardware. Run the physical snake, measure act
 <video controls preload="metadata" style="width:100%; border-radius:8px;" src="/assets/vid/course/ee599/snake-gait.mp4"></video>
 *The Lab 3 snake running one of the designed gaits on the bench — the connection vector fields, made flesh (well, LEGO).*
 
-## The paper presentations
+## Learning to read papers
 
-Each of us presented two research papers, ten minutes each, from a pool Prof. Qian curated. The pool was the real literature — Science Robotics papers on self-reconfigurable robot swarms, quadruped gait transitions, Salto the jumping robot, directionally compliant legs for crevasse traversal.
+Somewhere in the middle of the semester I had to stand up and explain two research papers in ten minutes each, to people who'd read the same papers. That teaches you something no amount of reading does: you have to decide what the paper's *one* idea is, and defend that choice out loud. It's the conference-talk skill, compressed — and it's changed how I read everything since.
 
-Ten minutes on a Science Robotics paper teaches you something no amount of reading does: you have to decide what the paper's *one* idea is, and defend that choice in front of people who read the same paper. It's the conference-talk skill, compressed.
-
-## Walking, running, and the guest lecture
+## Walking is a pendulum, running is a spring
 
 The dynamics units gave me the vocabulary I still use. **Walking is an inverted pendulum**: the body's center of mass vaults over a stiff leg, trading kinetic energy for gravitational potential energy and back. The rimless wheel model — a wheel with spokes but no rim, each spoke a step — captures it with shocking economy. Stability analysis via Poincaré maps and cobweb diagrams: does the gait converge back to itself after a perturbation, or fall over?
 
 **Running is a spring.** The spring-loaded inverted pendulum (SLIP): the leg compresses on touchdown, stores energy, releases it at liftoff. Same center-of-mass curves as walking, reversed mechanism — gravity doing the work in one, the spring in the other.
 
-Diego's lecture made the quantitative modeling feel alive because he'd *built* the things the equations described. When someone who's made a robot do parkour walks you through a cobweb diagram, you believe the diagram.
+What made it land wasn't the equations alone — it was seeing them from someone who'd *built* the machines they described. The math stopped being abstract the moment it had a robot attached.
 
 ## Terrain: where the course pointed at the project
 
@@ -125,7 +87,7 @@ The last lecture units — terrain adaptation on deformable and rough terrain �
 
 My team took that message literally. Our project asked whether timed vibration — fluidizing the sand during leg swing, letting it compact during stance — could improve locomotion efficiency on granular media. Ten weeks, biweekly checkpoints, a bead testbed, current sensing, and a final report written like a conference paper.
 
-The result was a null: cost of transport went from 50 to 77 once we honestly accounted for the vibration motors' power draw. I've written the full story separately — [the deep dive is here](/2026/09/26/timed-vibration-granular-locomotion/) — but the course deserves the credit for the *shape* of that failure. The lab reports had trained us to keep a predicted-vs-measured table. The no-AI rule meant every number was ours. The conference-paper format meant the null result had to be reported, not hidden. **The course didn't just teach us locomotion; it taught us how to be wrong in public, carefully.**
+The result was a null: cost of transport went from 50 to 77 once we honestly accounted for the vibration motors' power draw. I've written the full story separately — [the deep dive is here](/2026/09/26/timed-vibration-granular-locomotion/). What the semester gave me for that project wasn't the idea — it was the habits: keep a predicted-vs-measured table, report the null instead of hiding it. **Be wrong in public, carefully.**
 
 ## What stuck
 
@@ -139,7 +101,7 @@ A year later, here's what I actually kept:
 
 **Research is a format, not a talent.** Proposal, checkpoints, demo, conference-style report — the project taught the *motions* of research: hypothesis, experiment plan, preliminary data, honest discussion. You don't need permission to do science; you need a lab notebook and a deadline.
 
-And the teaching lesson, the one I'll carry if I ever teach: **the math follows the machine, not the other way around.** Every unit in EE 599 went: watch the thing move → build the physical picture → write the math → test it on hardware Thursday. Reverse that order and you get a course students survive. In that order, you get a course students keep.
+**Learn in the right order.** Watch it move → build the physical picture → write the math → test it. I keep catching myself reversing that order on new topics — reaching for equations before I have a picture — and the picture-first version wins every time.
 
 ---
 
