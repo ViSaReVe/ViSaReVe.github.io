@@ -6,25 +6,25 @@ layout: home
   <div class="intro-copy">
     <h2 id="intro-title">Hey, I’m Visare.</h2>
     <p>I’m an <strong>ML engineer</strong> working with signals from muscles, brains, and sensors.</p>
-    <p>I build end-to-end systems—from raw neural and biosignal streams to training, evaluation, and model serving.</p>
+    <p>I build end-to-end systems, from raw neural and biosignal streams to training, evaluation, and model serving.</p>
     <p>I care about work that’s measurable, reproducible, and shipped.</p>
   </div>
   <div class="affiliations">
-    <div class="affiliation now"><span class="status-label">Now</span><div class="affiliation-links"><a href="https://www.isi.edu"><img src="{{ '/assets/img/logos/usc-isi.png' | relative_url }}" width="24" height="24" alt="">USC ISI / Alexandria</a><span class="separator">·</span><a href="https://sites.usc.edu/coorlab/"><img src="{{ '/assets/img/logos/coor-usc.png' | relative_url }}" width="24" height="24" alt="">USC COOR Lab</a></div></div>
-    <div class="affiliation"><span class="status-label">Previously</span><div class="affiliation-links"><a href="https://www.brainsightai.com"><img src="{{ '/assets/img/logos/brainsightai.png' | relative_url }}" width="24" height="24" alt="">BrainSightAI</a><span class="separator">·</span><a href="https://www.linkedin.com/company/hma-lab-iiits/"><img src="{{ '/assets/img/logos/hmal-iiit.png' | relative_url }}" width="24" height="24" alt="">HMA Lab, IIIT Sri City</a></div></div>
+    <div class="affiliation now"><span class="status-label">Now</span><div class="affiliation-links"><span>Algomash (Oct 2026 - Present)</span><span class="separator">·</span><a href="https://sites.usc.edu/coorlab/"><img src="{{ '/assets/img/logos/coor-usc.png' | relative_url }}" width="24" height="24" alt="">USC COOR Lab (Jul 2025 - Present)</a><span class="separator">·</span><a href="#contact">Searching for full-time ML roles</a></div></div>
+    <div class="affiliation"><span class="status-label">Previously</span><div class="affiliation-links"><a href="https://www.isi.edu"><img src="{{ '/assets/img/logos/usc-isi.png' | relative_url }}" width="24" height="24" alt="">USC ISI / Alexandria (ended Sep 2026)</a><span class="separator">·</span><a href="https://www.brainsightai.com"><img src="{{ '/assets/img/logos/brainsightai.png' | relative_url }}" width="24" height="24" alt="">BrainSightAI</a><span class="separator">·</span><a href="https://www.linkedin.com/company/hma-lab-iiits/"><img src="{{ '/assets/img/logos/hmal-iiit.png' | relative_url }}" width="24" height="24" alt="">HMA Lab, IIIT Sri City</a></div></div>
   </div>
   <p class="highlights-intro">A few things I’m proud of:</p>
   <ul class="highlights">
-    <li><span aria-hidden="true">📄</span><span>Published <a href="{{ '/about/#publications' | relative_url }}">three IEEE papers</a> on classifying daily activities from muscle signals — two in Rome, one in the US — carrying each one from problem statement to publication.</span></li>
+    <li><span aria-hidden="true">📄</span><span>Published <a href="{{ '/about/#publications' | relative_url }}">three IEEE papers</a> on classifying daily activities from muscle signals (two in Rome, one in the US), carrying each one from problem statement to publication.</span></li>
     <li><span aria-hidden="true">🧪</span><span>Ran the two-year collection behind <a href="https://www.kaggle.com/datasets/anishturlapaty/emaha-db4">EMAHA-DB4</a>–<a href="https://www.kaggle.com/datasets/anishturlapaty/emaha-db7">DB7</a>: recruited and recorded 70 subjects, then released all four datasets publicly on Kaggle and Harvard Dataverse for other labs to build on.</span></li>
-    <li><span aria-hidden="true">🐛</span><span>Found and fixed a <a href="https://github.com/cupy/cupy/pull/10139">signal-processing bug in CuPy</a> — <code>bilinear</code> was quietly sensitive to leading zeros — plus <a href="https://github.com/cupy/cupy/pull/10138">a missing API doc</a>; both merged upstream.</span></li>
-    <li><span aria-hidden="true">🔍</span><span>Caught a denoising failure at BrainSightAI that SNR and RMSE both passed — visible only on rendered FA maps — and changed the production default on that evidence.</span></li>
+    <li><span aria-hidden="true">🐛</span><span>Found and fixed a <a href="https://github.com/cupy/cupy/pull/10139">signal-processing bug in CuPy</a> (<code>bilinear</code> was quietly sensitive to leading zeros) plus <a href="https://github.com/cupy/cupy/pull/10138">a missing API doc</a>; both merged upstream.</span></li>
+    <li><span aria-hidden="true">🔍</span><span>Caught a denoising failure at BrainSightAI that SNR and RMSE both passed, visible only on rendered FA maps, and changed the production default on that evidence.</span></li>
   </ul>
   {% include social-links.html %}
 </section>
 
 <section class="panel" id="projects" aria-labelledby="work-title">
-  <div class="section-heading"><div><p class="eyebrow">A collection of experiments</p><h2 id="work-title">Selected work</h2></div><span class="section-index" aria-hidden="true">01 — 06</span></div>
+  <div class="section-heading"><div><p class="eyebrow">A collection of experiments</p><h2 id="work-title">Selected work</h2></div><span class="section-index" aria-hidden="true">01 / 06</span></div>
   <p class="section-description">Things I’ve built, measured, and learned from.</p>
   <div class="project-grid">
     {% assign projects = site.projects | sort: 'order' %}

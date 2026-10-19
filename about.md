@@ -34,6 +34,7 @@ I graduated with my M.S. in Electrical and Computer Engineering (ML & Data Scien
 {% for exp in site.data.experience %}
 <section class="experience-entry">
 <div class="experience-heading">{% assign logo = exp.logo | append: "" | strip %}{% if logo != "" %}<img src="{{ exp.logo | relative_url }}" alt="" width="40" height="40" loading="lazy">{% endif %}<div><h3>{% assign org_url = exp.url | append: "" | strip %}{% if org_url != "" %}<a href="{{ exp.url }}">{{ exp.organization }}</a>{% else %}{{ exp.organization }}{% endif %}</h3><p>{{ exp.role }} · {{ exp.period }}</p></div></div>
+{% assign summary = exp.summary | append: "" | strip %}{% if summary != "" %}<p class="experience-summary">{{ summary }}</p>{% endif %}
 <ul>{% for highlight in exp.highlights %}<li>{{ highlight }}</li>{% endfor %}</ul>
 </section>
 {% endfor %}

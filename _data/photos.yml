@@ -1,0 +1,6 @@
+# Optional photo entries for the site.
+# Leave empty until image files are added under assets/photos/.
+# Example:
+# - src: "/assets/photos/profile-about.webp"
+#   alt: "Vidya Sagar Reddy Venna"
+#   caption: "At the lab bench"

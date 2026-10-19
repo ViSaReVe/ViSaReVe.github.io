@@ -1,6 +1,7 @@
 - group: "Languages"
   items:
     - Python
+    - C (ESP-IDF)
     - C++
     - SQL
     - MATLAB
@@ -9,10 +10,8 @@
 - group: "ML & AI"
   items:
     - PyTorch
-    - TensorFlow
     - scikit-learn
     - XGBoost
-    - JAX
     - ONNX
     - ONNX Runtime
     - OpenCV
@@ -20,7 +19,6 @@
 
 - group: "LLM & Retrieval"
   items:
-    - LangChain
     - ChromaDB
     - Neo4j
     - Hybrid retrieval (RRF)
@@ -52,7 +50,6 @@
 - group: "Cloud & Data"
   items:
     - Azure
-    - GCP
 
 - group: "Biomedical & Neuroimaging"
   items:
