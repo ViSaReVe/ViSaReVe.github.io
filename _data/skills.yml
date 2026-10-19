@@ -5,7 +5,6 @@
     - SQL
     - MATLAB
     - JavaScript
-    - R
 
 - group: "ML & AI"
   items:
@@ -15,6 +14,7 @@
     - XGBoost
     - JAX
     - ONNX
+    - ONNX Runtime
     - OpenCV
     - Hugging Face
 
@@ -44,6 +44,8 @@
     - pytest
     - MLflow
     - Weights & Biases
+    - NVIDIA Triton
+    - CuPy
     - Git
     - Linux
 
@@ -51,7 +53,6 @@
   items:
     - Azure
     - GCP
-    - Spark
 
 - group: "Biomedical & Neuroimaging"
   items:

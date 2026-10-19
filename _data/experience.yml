@@ -1,9 +1,16 @@
+- role: "Machine Learning Intern"
+  organization: "Algomash"
+  period: "Oct 2026 - Present"
+  summary: "60-day pilot in physiological-signal ML, model training and evaluation."
+  highlights:
+    - "Currently engaged in a 60-day pilot project focused on physiological-signal ML training and evaluation pipelines. (Details protected under NDA)."
+
 - role: "Graduate Researcher"
   organization: "USC Information Sciences Institute — Project Alexandria"
   logo: "/assets/img/logos/usc-isi.png"
   url: "https://www.isi.edu"
-  period: "Aug 2025 - Present"
-  summary: "LLM pipeline turning research PDFs into a queryable knowledge graph."
+  period: "Aug 2025 - Sep 2026"
+  summary: "Built the knowledge-unit extraction pipeline (my folder 02/ in the repo) for an offline literature-review companion. The demo app code was a colleague's, not mine."
   highlights:
     - "Built a PDF-to-structured-record service in Python (2,910 lines across 8 modules) with cloud and fully local model backends interchangeable behind one interface, cutting extraction cost per page to zero on the local path."
     - "Added semantic retrieval over ChromaDB with sentence-transformer embeddings, plus a Neo4j layer that resolves repeated entities across documents via MERGE on (name, type) — a cross-document node/edge graph instead of per-file silos."
@@ -37,5 +44,5 @@
   period: "May 2022 - May 2024"
   summary: "Led sEMG data collection and modeling; 3 IEEE publications."
   highlights:
-    - "Led collection and public release of four surface EMG datasets (EMAHA-DB4 to DB7, 70 subjects)."
-    - "Trained CNN and BiLSTM classifiers over a filter, rectify, normalize, feature-extract pipeline — producing three peer-reviewed IEEE publications (EMBC, BIOSIGNALS, ISPA)."
+    - "Ran the 2-year collection behind the public EMAHA-DB4 to DB7 datasets: recruited and recorded 70 subjects, and released the datasets on Kaggle and Harvard Dataverse."
+    - "Trained CNN and BiLSTM classifiers over a filter, rectify, normalize, feature-extract pipeline — producing three peer-reviewed IEEE publications (First-author ISPA 2023; co-author EMBC 2024, BIOSIGNALS 2024)."
