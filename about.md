@@ -18,7 +18,7 @@ Currently, I work as a graduate researcher at USC's COOR Lab, where I develop ML
 
 {% for exp in site.data.experience %}
 <section class="experience-entry">
-<div class="experience-heading"><img src="{{ exp.logo | relative_url }}" alt="" width="40" height="40" loading="lazy"><div><h3><a href="{{ exp.url }}">{{ exp.organization }}</a></h3><p>{{ exp.role }} · {{ exp.period }}</p></div></div>
+<div class="experience-heading">{% assign logo = exp.logo | append: "" | strip %}{% if logo != "" %}<img src="{{ exp.logo | relative_url }}" alt="" width="40" height="40" loading="lazy">{% endif %}<div><h3>{% assign org_url = exp.url | append: "" | strip %}{% if org_url != "" %}<a href="{{ exp.url }}">{{ exp.organization }}</a>{% else %}{{ exp.organization }}{% endif %}</h3><p>{{ exp.role }} · {{ exp.period }}</p></div></div>
 <ul>{% for highlight in exp.highlights %}<li>{{ highlight }}</li>{% endfor %}</ul>
 </section>
 {% endfor %}
