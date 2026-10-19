@@ -24,7 +24,7 @@ gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # Ruby 3.4+ / 4.0 dropped these from the stdlib; Jekyll 4.3 still requires them.
-# Only needed for local builds — GitHub Pages uses its own pinned toolchain.
+# Only needed for local builds; GitHub Pages uses its own pinned toolchain.
 gem "csv", "~> 3.3"
 gem "base64", "~> 0.2"
 gem "bigdecimal", "~> 3.1"

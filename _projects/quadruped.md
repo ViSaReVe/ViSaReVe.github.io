@@ -1,5 +1,5 @@
 ---
-institution: "USC - EE 579"
+institution: "USC - EE 599"
 category: "Robotics"
 github: "https://github.com/ViSaReVe/timed-vibration-granular-locomotion"
 tags: ["Embedded C++", "Robotics", "Firmware"]
@@ -21,20 +21,20 @@ media:
     src: "/assets/vid/quadruped/granular-walk.mp4"
     poster: "/assets/img/quadruped/granular-walk-poster.jpg"
     label: "Full locomotion run on the granular testbed"
-    caption: "Full test run on the granular medium — the timed-vibration gait carrying the quadruped across the bead bed."
+    caption: "Full test run on the granular medium: the timed-vibration gait carrying the quadruped across the bead bed."
   - type: video
     src: "/assets/vid/quadruped/bead-run.mp4"
     label: "Bead testbed run"
-    caption: "Early testbed run — the quadruped over the bead trough, before the full granular trials."
+    caption: "Early testbed run: the quadruped over the bead trough, before the full granular trials."
   - src: "/assets/img/quadruped/chassis-wide.jpg"
     alt: "Quadruped chassis on the work mat"
-    caption: "Full chassis on the bench — four Dynamixel XL-320 servos, Arduino-compatible controller, Li-ion pack."
+    caption: "Full chassis on the bench: four Dynamixel XL-320 servos, Arduino-compatible controller, Li-ion pack."
   - src: "/assets/img/quadruped/leg-detail.jpg"
     alt: "Side view of leg linkages and servo mounts"
-    caption: "Leg detail — 3D-printed servo mounts driving the linkages, one DOF per leg."
+    caption: "Leg detail: 3D-printed servo mounts driving the linkages, one DOF per leg."
   - src: "/assets/img/quadruped/team-testbed.jpg"
     alt: "Team with the robot and the granular testbed"
-    caption: "The team with the robot and the granular testbed — a wooden box of beads standing in for loose terrain."
+    caption: "The team with the robot and the granular testbed, a wooden box of beads standing in for loose terrain."
   - src: "/assets/img/quadruped/team-robot.jpg"
     alt: "Team holding the finished quadruped"
     caption: "Final build, in hand."
@@ -42,7 +42,7 @@ media:
 
 ## The project
 
-Embedded C++ firmware for a quadruped robot walking on granular terrain. I implemented a Buehler-clock gait and drove DRV2605L haptic actuators for timed vibration during leg swing phases — studying how vibration timing affects locomotion on loose substrate.
+Embedded C++ firmware for a quadruped robot walking on granular terrain. I implemented a Buehler-clock gait and drove DRV2605L haptic actuators for timed vibration during leg swing phases, studying how vibration timing affects locomotion on loose substrate.
 
 ## Hardware
 
@@ -60,4 +60,4 @@ Embedded C++ firmware for a quadruped robot walking on granular terrain. I imple
 
 ## Testbed
 
-A wooden box filled with beads as a repeatable granular substrate — the robot walked the box while we varied vibration timing and gait, watching which combinations kept it moving instead of digging in.
+A wooden box filled with beads as a repeatable granular substrate. The robot walked the box while we varied vibration timing and gait, watching which combinations kept it moving instead of digging in.

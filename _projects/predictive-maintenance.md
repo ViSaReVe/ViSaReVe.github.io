@@ -26,4 +26,4 @@ End-to-end sensor time-series ML system: sliding-window DSP features, XGBoost RU
 
 ## At a glance
 
-**RMSE 16.80 · PR-AUC 0.9998** — NASA C-MAPSS RUL · CWRU fault detection.
+**RMSE 16.80 · PR-AUC 0.9998** · NASA C-MAPSS RUL · CWRU fault detection.

@@ -1,4 +1,4 @@
-# Vi Sa Re Ve — portfolio
+# Vi Sa Re Ve: portfolio
 
 A personal portfolio built with Jekyll and hosted on GitHub Pages. The design uses a short introduction, animated signal banner, illustrated project covers, and separate project and writing pages. Everything is generated as static HTML, CSS, and JavaScript.
 

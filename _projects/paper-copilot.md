@@ -2,7 +2,7 @@
 institution: "Personal Project"
 category: "LLM / RAG"
 metric: "0.88 Doc-Hit@5"
-metric_label: "hybrid RRF, MRR 0.820 — n=59, bootstrap 95% CI"
+metric_label: "hybrid RRF, MRR 0.820 (n=59, bootstrap 95% CI)"
 tags: ["RAG", "Retrieval Eval", "FastAPI", "Python"]
 featured: true
 layout: "project"
@@ -21,8 +21,8 @@ cover_alt: "Illustrated research papers connected by citation paths."
 
 ## The project
 
-Local literature-review copilot — PDF on the left, chat on the right, every answer carrying (paper, page) citations and refusing when evidence is weak. Runs fully offline: no API keys, no GPU. Evaluated properly on 39 papers and 59 hand-reviewed questions with bootstrap CIs and paired McNemar tests, which showed the retrievers are statistically tied (TF-IDF vs hybrid, p = 1.000) and that LLM query-reformulation actively degraded results at 2x latency — built, measured, and left off by default.
+Local literature-review copilot: PDF on the left, chat on the right, every answer carrying (paper, page) citations and refusing when evidence is weak. Runs fully offline: no API keys, no GPU. Evaluated properly on 39 papers and 59 hand-reviewed questions with bootstrap CIs and paired McNemar tests, which showed the retrievers are statistically tied (TF-IDF vs hybrid, p = 1.000) and that LLM query-reformulation actively degraded results at 2x latency, so it was built, measured, and left off by default.
 
 ## At a glance
 
-**0.88 Doc-Hit@5** — hybrid RRF, MRR 0.820 — n=59, bootstrap 95% CI.
+**0.88 Doc-Hit@5** · hybrid RRF, MRR 0.820 (n=59, bootstrap 95% CI).

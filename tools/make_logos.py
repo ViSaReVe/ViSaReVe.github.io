@@ -1,6 +1,6 @@
 """Regenerate the experience-logo tiles from the archived originals.
 
-Sources live in assets/img/logos/_src/ (versioned, not published — Jekyll
+Sources live in assets/img/logos/_src/ (versioned, not published; Jekyll
 skips underscore-prefixed directories). Output is an 88px square PNG per
 organization, displayed at 44px in the Experience list.
 
