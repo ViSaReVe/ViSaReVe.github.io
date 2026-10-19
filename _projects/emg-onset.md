@@ -2,7 +2,7 @@
 institution: "USC COOR Lab"
 category: "Signal ML"
 metric: "7 muscles"
-metric_label: "automated EMG onset & per-rep biomarkers — NIH study"
+metric_label: "automated EMG onset & per-rep biomarkers (NIH study)"
 tags: ["Biosignal Processing", "Clinical ML", "Signal Processing"]
 featured: true
 layout: "project"
@@ -25,4 +25,4 @@ Developed tooling for USC's NIH-funded rotator cuff tendinopathy study that auto
 
 ## At a glance
 
-**7 muscles** — automated EMG onset & per-rep biomarkers — NIH study.
+**7 muscles** · automated EMG onset & per-rep biomarkers (NIH study).

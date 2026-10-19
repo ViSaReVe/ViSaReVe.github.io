@@ -1,7 +1,7 @@
 # Site settings
 title: "Vi Sa Re Ve"
 brand_name: "Vi Sa Re Ve"
-description: "Vidya Sagar Reddy Venna (Vi Sa Re Ve) — ML engineer working on biosignals, neural decoding, and time-series ML. Graduated MS ECE (ML & Data Science) at USC, May 2026. Currently on post-completion OPT."
+description: "Vidya Sagar Reddy Venna (Vi Sa Re Ve), ML engineer working on biosignals, neural decoding, and time-series ML. Graduated MS ECE (ML & Data Science) at USC, May 2026. Currently on post-completion OPT."
 tagline: "ML & Signal-Processing Engineer"
 url: "https://visareve.github.io"
 baseurl: ""
